@@ -3,4 +3,8 @@ body, html {
     margin:0;
 }
 
+textarea#ssText {
+    width: 100%;
+}
+
 /* p { text-transform: capitalize; } */

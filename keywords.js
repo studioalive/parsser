@@ -47,5 +47,16 @@ var keywords = [
     'seal',
     'll',
     'rl',
-    'legs'
+    'legs',
+    'back',
+    'calves',
+    'calf',
+    'bilingual',
+    'lid',
+    'digital',
+    'digitally',
+    'digi',
+    'digi-print',
+    'print-digi',
+    'applique'
 ];
