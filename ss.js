@@ -5,7 +5,7 @@ function parSSer() {
     // ssInput = `University of Leeds Fleece Lined Jacket with heat seal University crest to left chest, SS logo printed in white to right chest, stacked club logo printed in white to right sleeve with Men's Cricket printed underneath in white, Leeds Gryphons printed to reverse in white, Gryphon logo printed above text in white and white rose printed below text. option of initials printed to left arm in white.`;
     // document.getElementById("ssText").value = "";
     // document.getElementById("ssText").value = "University of Leeds Fleece Lined Jacket with heat seal University crest to left chest, SS logo printed in white to right chest, stacked club logo printed in white to right sleeve with Men's Cricket printed underneath in white, Leeds Gryphons printed to reverse in white, Gryphon logo printed above text in white and white rose printed below text. option of initials printed to left arm in white.";
-    sentz = ssInput.split(/,|\.|with|option|and/);        
+    sentz = ssInput.split(/,|\.|with|option|Option|and/);        
             for (let a = 0; a < sentz.length; a++) {
                 words = sentz[a].split(" ");
                 builder = [];
@@ -25,7 +25,7 @@ function parSSer() {
                     //     builder.push(words[j]);
                     // }
 
-                    if ((first === first.toUpperCase()) && !(keywords2.includes(words[j])) && !(keywords.includes(lower))) {
+                    if ((first === first.toUpperCase()) && !(keywords2.includes(words[j])) && !(keywords.includes(lower)) && (lower.length>1)) {
                         builder.push(words[j]);                      
                     }
 

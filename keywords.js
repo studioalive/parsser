@@ -58,5 +58,7 @@ var keywords = [
     'digi',
     'digi-print',
     'print-digi',
-    'applique'
+    'applique',
+    'lower',
+    'upper'
 ];
