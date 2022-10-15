@@ -32,5 +32,7 @@ var keywords = [
     'trim',
     'sky',
     'reverse',
-    'amber'
-]
+    'amber',
+    'tag',
+    'nametag'
+];
