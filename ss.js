@@ -39,7 +39,7 @@ function parSSer() {
                 }
                 breaktest = builder.length;                
                 
-                if (breaktest > 3) {
+                if (breaktest > 0) {
                     builder.forEach(addText);                    
                     addBreak();}
             }
