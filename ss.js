@@ -1,8 +1,8 @@
 
 function parSSer() {
     document.getElementById("ssResult").innerHTML = "";
-    // ssInput = document.getElementById("ssText").value;  
-    ssInput = `Halliford School PE Shirt with school logo printed to left chest (TRANS-HALLIFORDWH), ss logo printed right chest (PRINT-SS-HALLIFORD), House name to reverse (PRINT-HALLIFORD) optional initials printed to right sleeve in white for £1.50 (40mm) and optional name tag printed inside the garment for £2.50`
+    ssInput = document.getElementById("ssText").value;  
+    // ssInput = `Halliford School PE Shirt with school logo printed to left chest (TRANS-HALLIFORDWH), ss logo printed right chest (PRINT-SS-HALLIFORD), House name to reverse (PRINT-HALLIFORD) optional initials printed to right sleeve in white for £1.50 (40mm) and optional name tag printed inside the garment for £2.50`
     
     sentz = ssInput.split(/,|\)|with|and/);
         console.log(sentz.length);
@@ -14,11 +14,16 @@ function parSSer() {
                     if (words[j].substring(0, 1) === "(") {
                         var bracket = words[j].slice(1,words[j].length);
                         builder.push(bracket);
+                        break;
                     }
 
-                    var firstthree = words[j].substring(0, 3).toLowerCase();
-                    if (keywords.includes(firstthree)) {
-                        builder.push(firstthree);
+                    if (words[j] == words[j].toUpperCase()) {
+                        builder.push(words[j]);
+                    }
+
+                    var lower = words[j].toLowerCase();
+                    if (keywords.includes(lower)) {
+                        builder.push(lower);
                     }
                     
                     
@@ -26,7 +31,7 @@ function parSSer() {
                 breaktest = builder.length;                
                 
                 if (breaktest > 0) {
-                    addText(builder.toString());
+                    builder.forEach(addText);                    
                     addBreak();}
             }
         }
