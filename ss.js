@@ -3,11 +3,9 @@ function parSSer() {
     document.getElementById("ssResult").innerHTML = "";
     // ssInput = document.getElementById("ssText").value;  
     ssInput = `Halliford School PE Shirt with school logo printed to left chest (TRANS-HALLIFORDWH), ss logo printed right chest (PRINT-SS-HALLIFORD), House name to reverse (PRINT-HALLIFORD) optional initials printed to right sleeve in white for £1.50 (40mm) and optional name tag printed inside the garment for £2.50`
-    sentences = ssInput.split(",");
-    for (let i = 0; i < sentences.length; i++) {
-        sents = sentences[i].split("and");
-        for (let b = 0; b < sents.length; b++) {
-            sentz = sents[b].split(")");
+    
+    sentz = ssInput.split(/,|\)|with|and/);
+        console.log(sentz.length);
             for (let a = 0; a < sentz.length; a++) {
                 words = sentz[a].split(" ");
                 builder = [];
@@ -32,8 +30,7 @@ function parSSer() {
                     addBreak();}
             }
         }
-    }
-}
+
 function addText(txt) {
     document.getElementById("ssResult").insertAdjacentHTML('beforeend', ` ` + txt + ` `);
 }

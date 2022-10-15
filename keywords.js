@@ -29,5 +29,6 @@ var keywords = [
     'log',
     'ini',
     'nam',
-    'tri'
+    'tri',
+    'sky'
 ]
