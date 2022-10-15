@@ -13,6 +13,11 @@ function parSSer() {
                 builder = [];
                 for (let j = 0; j < words.length; j++) {
                     
+                    if (words[j].substring(0, 1) === "(") {
+                        var bracket = words[j].slice(1,words[j].length);
+                        builder.push(bracket);
+                    }
+
                     var firstthree = words[j].substring(0, 3).toLowerCase();
                     if (keywords.includes(firstthree)) {
                         builder.push(firstthree);
@@ -21,7 +26,7 @@ function parSSer() {
                     
                 }
                 breaktest = builder.length;                
-                console.log(breaktest);
+                
                 if (breaktest > 0) {
                     addText(builder.toString());
                     addBreak();}
