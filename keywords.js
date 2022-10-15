@@ -60,5 +60,7 @@ var keywords = [
     'print-digi',
     'applique',
     'lower',
-    'upper'
+    'upper',
+    'pocket',
+    'flap'
 ];
