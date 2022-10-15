@@ -11,6 +11,7 @@ var keywords = [
     'opposite',
     'embroidered',
     'print',
+    'printed',
     'lc',
     'rc',
     'ss',
@@ -34,5 +35,17 @@ var keywords = [
     'reverse',
     'amber',
     'tag',
-    'nametag'
+    'nametag',
+    'side',
+    'panels',
+    'panel',
+    'front',
+    'text',
+    'underneath',
+    'rose',
+    'heat',
+    'seal',
+    'll',
+    'rl',
+    'legs'
 ];

@@ -2,27 +2,34 @@
 function parSSer() {
     document.getElementById("ssResult").innerHTML = "";
     ssInput = document.getElementById("ssText").value;  
-    // ssInput = `Halliford School PE Shirt with school logo printed to left chest (TRANS-HALLIFORDWH), ss logo printed right chest (PRINT-SS-HALLIFORD), House name to reverse (PRINT-HALLIFORD) optional initials printed to right sleeve in white for £1.50 (40mm) and optional name tag printed inside the garment for £2.50`
+    // ssInput = `University of Leeds Fleece Lined Jacket with heat seal University crest to left chest, SS logo printed in white to right chest, stacked club logo printed in white to right sleeve with Men's Cricket printed underneath in white, Leeds Gryphons printed to reverse in white, Gryphon logo printed above text in white and white rose printed below text. option of initials printed to left arm in white.`;
     // document.getElementById("ssText").value = "";
-    sentz = ssInput.split(/,|\)|with|and/);        
+    // document.getElementById("ssText").value = "University of Leeds Fleece Lined Jacket with heat seal University crest to left chest, SS logo printed in white to right chest, stacked club logo printed in white to right sleeve with Men's Cricket printed underneath in white, Leeds Gryphons printed to reverse in white, Gryphon logo printed above text in white and white rose printed below text. option of initials printed to left arm in white.";
+    sentz = ssInput.split(/,|\.|with|option|and/);        
             for (let a = 0; a < sentz.length; a++) {
                 words = sentz[a].split(" ");
                 builder = [];
                 for (let j = 0; j < words.length; j++) {
                     
-                    if (words[j].substring(0, 1) === "(") {
-                        var bracket = words[j].slice(1,words[j].length);
-                        builder.push(bracket);
-                        break;
+                    var first = words[j].substring(0, 1);
+                    var lower = words[j].toLowerCase();
+                    var upper = words[j].toUpperCase();
+
+                    if ((first === "#")) {
+                        builder.push(words[j]);                      
                     }
 
-                    upper = words[j].toUpperCase();
+
                     
-                    if ((words[j] === upper) && ( words[j] !== words[j].toLowerCase()) && !(keywords2.includes(upper))) {
+                    if ((words[j] === upper) && ( words[j] !== words[j].toLowerCase()) && !(keywords2.includes(upper)) && !(keywords.includes(lower))) {
                         builder.push(words[j]);
                     }
 
-                    var lower = words[j].toLowerCase();
+                    if ((first === first.toUpperCase()) && !(keywords2.includes(words[j])) && !(keywords.includes(lower))) {
+                        builder.push(words[j]);                      
+                    }
+
+ 
                     if (keywords.includes(lower)) {
 
                         builder.push(lower);
@@ -32,7 +39,7 @@ function parSSer() {
                 }
                 breaktest = builder.length;                
                 
-                if (breaktest > 0) {
+                if (breaktest > 3) {
                     builder.forEach(addText);                    
                     addBreak();}
             }
