@@ -26,7 +26,7 @@ function addBreak() {
 }
 
 function wordCheck(word, pos) {
-    firstthree = word.substring(0, 3).toLowerCase();
+    var firstthree = word.substring(0, 3).toLowerCase();
     console.log(firstthree);
     switch (firstthree) {
         case "cus":
@@ -57,13 +57,21 @@ function wordCheck(word, pos) {
 }
 
 function wordScan(word, pos) {
+    builder = [word];
     addBreak();
     for (let x = pos - 3; x < pos + 5; x++) {
         if (typeof words[x] !== 'undefined') {
-            addText(words[x]);
+            var firstthree = words[x].substring(0, 3).toLowerCase();
+            if (keywords.includes(firstthree)) {
+                builder.push(firstthree);
+            }
+           
         }
     }
+    addText(builder.toString());
 }
+
+
 
 function custom(pos) {
 
