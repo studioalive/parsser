@@ -21,9 +21,9 @@ function parSSer() {
 
 
                     
-                    if ((words[j] === upper) && ( words[j] !== words[j].toLowerCase()) && !(keywords2.includes(upper)) && !(keywords.includes(lower))) {
-                        builder.push(words[j]);
-                    }
+                    // if ((words[j] === upper) && ( words[j] !== words[j].toLowerCase()) && !(keywords2.includes(upper)) && !(keywords.includes(lower))) {
+                    //     builder.push(words[j]);
+                    // }
 
                     if ((first === first.toUpperCase()) && !(keywords2.includes(words[j])) && !(keywords.includes(lower))) {
                         builder.push(words[j]);                      
