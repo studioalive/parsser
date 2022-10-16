@@ -65,5 +65,9 @@ var keywords = [
     'flap',
     'stacked',
     'club',
-    'arms'
+    'arms',
+    'top',
+    'number',
+    'embroidery',
+    'shoulders'
 ];
