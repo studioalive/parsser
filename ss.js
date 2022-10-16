@@ -14,6 +14,8 @@ function parSSer() {
                     var first = words[j].substring(0, 1);
                     var lower = words[j].toLowerCase();
                     var upper = words[j].toUpperCase();
+                    var last = words[j].slice(-1);
+                    
 
                     if ((first === "#")) {
                         builder.push(words[j]);                      
@@ -25,7 +27,13 @@ function parSSer() {
                     //     builder.push(words[j]);
                     // }
 
-                    if ((first === first.toUpperCase()) && !(keywords2.includes(words[j])) && !(keywords.includes(lower)) && (lower.length>1)) {
+                    // if ((first === first.toUpperCase()) && !(keywords2.includes(words[j])) && !(keywords.includes(lower)) && (lower.length>1)  && (first.match(/[a-z]/i))) {
+                    //     builder.push(words[j]);                      
+                    // }
+                    
+                    // && !(first.match(/\*/i))
+
+                    if ((first === first.toUpperCase()) && !(keywords2.includes(words[j])) && !(keywords.includes(lower)) && (lower.length>1)  && !(last.match(/[0-9]/i)) ){
                         builder.push(words[j]);                      
                     }
 

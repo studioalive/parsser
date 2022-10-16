@@ -64,5 +64,6 @@ var keywords = [
     'pocket',
     'flap',
     'stacked',
-    'club'
+    'club',
+    'arms'
 ];
