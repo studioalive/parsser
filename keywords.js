@@ -79,5 +79,6 @@ var keywords = [
     'number',
     'embroidery',
     'shoulders',
-    'name/number'
+    'name/number',
+    'woven'
 ];
