@@ -7,4 +7,7 @@ textarea#ssText {
     width: 100%;
 }
 
-/* p { text-transform: capitalize; } */
+p { 
+    text-transform: uppercase ;
+    font-family: sans-serif; 
+}
