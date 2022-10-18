@@ -80,5 +80,8 @@ var keywords = [
     'embroidery',
     'shoulders',
     'name/number',
-    'woven'
+    'woven',
+    'heat-sealed',
+    'stretch',
+    'centre'
 ];
